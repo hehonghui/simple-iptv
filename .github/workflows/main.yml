@@ -1,0 +1,38 @@
+name: Update simple.m3u daily
+
+on:
+  schedule:
+    - cron: '30 0 * * *'  # 每天 UTC 时间 00:30 执行（北京时间 08:30）
+  workflow_dispatch:     # 允许手动触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: pip install requests
+
+      - name: Run Python Script
+        run: python main.py
+
+      - name: Commit and Push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add simple.m3u
+          if git diff --cached --quiet; then
+            echo "✅ No changes to commit."
+          else
+            COMMIT_DATE=$(TZ="Etc/GMT+8" date +"%Y-%m-%d")
+            git commit -m "🔄 Daily update simple.m3u - $COMMIT_DATE"
+            git push
+          fi
