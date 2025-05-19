@@ -2,7 +2,7 @@ name: Update simple.m3u daily
 
 on:
   schedule:
-    - cron: '30 0 * * *'  # 每天 UTC 时间 00:30 执行（北京时间 08:30）
+    - cron: '20 3 * * *'  # 每天 UTC 时间 03:20 执行（北京时间 11:20）
   workflow_dispatch:     # 允许手动触发
 
 jobs:
