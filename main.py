@@ -4,6 +4,7 @@ import time
 
 
 def fetch_raw_m3u(url):
+    print("fetch raw m3u from " + url)
     response = requests.get(url)
     response.raise_for_status()
     return response.text
