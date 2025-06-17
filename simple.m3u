@@ -168,7 +168,9 @@ https://0472.org/hls/cgtna.m3u8
 #EXTINF:-1 group-title="国际",BBC
 https://vs-hls-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/t=3840/v=pv14/b=5070016/main.m3u8
 #EXTINF:-1 group-title="国际",BBC America
-http://143.244.60.30/Animal_Planet/index.m3u8
+http://fl3.moveonjoy.com/BBC_AMERICA/index.m3u8
+#EXTINF:-1 group-title="国际",BBC Kids
+https://jmp2.uk/sam-US800003JM.m3u8
 #EXTINF:-1 tvg-id="香港卫视" tvg-name="香港卫视" tvg-logo="https://live.fanmingming.cn/tv/香港卫视.png" group-title="卫视频道",香港卫视
 http://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8
 #EXTINF:-1 tvg-id="香港卫视" tvg-name="香港卫视" tvg-logo="https://live.fanmingming.cn/tv/香港卫视.png" group-title="港澳台频道",香港卫视
