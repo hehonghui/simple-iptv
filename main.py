@@ -86,7 +86,7 @@ if __name__ == '__main__':
     combined_entries = full_m3u.strip().splitlines()
 
     # 2. 提取 BBC
-    url_bbc = 'https://raw.githubusercontent.com/YueChan/Live/refs/heads/main/Global.m3u'
+    url_bbc = 'https://raw.githubusercontent.com/YueChan/Live/refs/heads/main/GNTV.m3u'
     bbc_m3u = fetch_raw_m3u(url_bbc)
     bbc_entries = extract_entries(bbc_m3u, ['BBC'])
 
